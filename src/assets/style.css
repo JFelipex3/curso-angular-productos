@@ -1,0 +1,50 @@
+#content{
+    margin-top: 30px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 5px #ccc;
+    padding: 0px;
+    overflow: hidden;
+}
+
+#header{
+    background-color: #BD002E;
+    color: white;
+    margin: 0px;
+    height: 90px;
+    line-height: 90px;
+}
+
+#header h1{
+    display: block;
+    line-height: 90px;
+    font-weight: bold;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+#nav{
+    background-color: #bd002fb4;
+    padding: 0px;
+}
+
+#nav ul li a{
+    color: white;
+    transition: all 300ms;
+}
+
+#nav ul li a:hover{
+    background: #BD002E;
+}
+
+#main .jumbotron{
+    padding: 50px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+#footer{
+    margin-top: 50px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    color: gray;
+}
