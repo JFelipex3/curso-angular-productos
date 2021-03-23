@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { ProductoService } from '../services/producto.service';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'productos-list',
@@ -10,7 +11,6 @@ import { ProductoService } from '../services/producto.service';
 
 export class ProductosListComponent{
     public titulo: string;
-    public reqResponse: any;
     public productos: any;
 
     constructor(
@@ -25,13 +25,11 @@ export class ProductosListComponent{
         console.log('Componente ProductosListComponent cargado.');
 
         this._productoService.getProductos().subscribe(
-            result => {
-                this.reqResponse = result;
-                
-                if(this.reqResponse.code != 200){
-                    console.log(this.reqResponse);
+            result => {    
+                if(result.code != 200){
+                    console.log(result);
                 } else {
-                    this.productos = this.reqResponse.data;
+                    this.productos = result.data;
                 }
             },
             error => {
